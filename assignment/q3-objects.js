@@ -12,13 +12,22 @@
 */
 
 const bookIdArr = ["NLB1", "NLB2", "NLB3", "NLB4"];
-const bookTitle = ["Lord of the Rings", "Programming for Dummies", "Introduction to Software Testing", "How to be a Software Developer"];
-let booksObj = {}; 
+const bookTitle = [
+  "Lord of the Rings",
+  "Programming for Dummies",
+  "Introduction to Software Testing",
+  "How to be a Software Developer",
+];
+let booksObj = {};
 
-function convert(keyArr, valueArr){
-    
-    // Add code here
-    /*
+function convert(keyArr, valueArr) {
+  // Add code here
+  keyArr.forEach((item, i) => {
+    booksObj[item] = valueArr[i];
+  });
+  return booksObj;
+
+  /*
         Tips:
         - Step 1: Create a local scoped object literal.
         - Step 2: Define a for-loop that run based on keyArr's length.
@@ -27,8 +36,10 @@ function convert(keyArr, valueArr){
     */
 }
 
-function printByKey(key){
-    console.log(booksObj[key]);
+
+
+function printByKey(key) {
+  console.log(booksObj[key]);
 }
 
 booksObj = convert(bookIdArr, bookTitle);
@@ -36,5 +47,5 @@ printByKey("NLB2"); // prints "Progamming for Dummies"
 
 // Ignore the code below this line
 module.exports = {
-    convert
-}
+  convert,
+};

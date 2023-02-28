@@ -25,6 +25,10 @@ function convert(keyArr, valueArr) {
   keyArr.forEach((item, i) => {
     booksObj[item] = valueArr[i];
   });
+  // Method 2:
+  //   for (i = 0; i < keyArr.length; i++) {
+  //     booksObj[keyArr[i]] = valueArr[i];
+  //   }
   return booksObj;
 
   /*
@@ -35,8 +39,6 @@ function convert(keyArr, valueArr) {
         - Step 4: Write a return statement to return the object literal after the for-loop code block.
     */
 }
-
-
 
 function printByKey(key) {
   console.log(booksObj[key]);
